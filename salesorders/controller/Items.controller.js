@@ -15,9 +15,8 @@ sap.ui.define([
 				context: this
 			}).done(function (data, textStatus, jqXHR) {
 				var oModel = new JSONModel();
-				var json = JSON.parse(data);
 				oModel.setData({
-					SalesOrderItemSet: json.d.results
+					SalesOrderItemSet: data.d.results
 				});
 				this.getView().setModel(oModel, "items");
 			});
