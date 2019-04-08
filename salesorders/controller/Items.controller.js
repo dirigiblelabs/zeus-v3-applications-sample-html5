@@ -11,7 +11,7 @@ sap.ui.define([
 		onInit : function() {
 			jQuery.ajax({
 				type: "GET",
-				url : Config.serviceUrl + "/s4/sap/opu/odata/sap/CFD_TSM_SALES_ORDER_MAINT_SRV/SalesOrderItemSet?$format=json",
+				url : Config.serviceUrl + "/sap/opu/odata/sap/CFD_TSM_SALES_ORDER_MAINT_SRV/SalesOrderItemSet?$format=json",
 				context: this
 			}).done(function (data, textStatus, jqXHR) {
 				var oModel = new JSONModel();
